@@ -33,6 +33,7 @@ ENV USER=$username
 ENV USE_CCACHE 1
 ENV CCACHE_SIZE 50G
 ENV CCACHE_DIR=/ccache
+ENV JAVA_TOOL_OPTIONS=-Xmx12G
 
 ENTRYPOINT chroot / /bin/bash -i
 #ENTRYPOINT chroot --userspec=$(cat /root/username):$(cat /root/username) / /bin/bash -i
