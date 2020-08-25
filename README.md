@@ -5,6 +5,8 @@ older branches that required 16.04 if you've upgraded to something newer.
 First, build the image:
 ```
 # Copy your host gitconfig, or create a stripped down version
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
 $ cp ~/.gitconfig gitconfig
 $ docker build --build-arg userid=$(id -u) --build-arg groupid=$(id -g) --build-arg username=$(id -un) -t android-build-16 .
 ```
