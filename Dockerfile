@@ -1,15 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 ARG userid
 ARG groupid
 ARG username
 RUN apt-get -qq update
 RUN apt-get -qqy upgrade
-RUN apt-get install -y bc bison bsdmainutils build-essential ccache cgpt cron \
-      curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick kmod \
-      lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 \
-      libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 \
-      libxml2-utils lsof lzop maven openjdk-11-jdk pngcrush procps python3 rsync \
-      schedtool squashfs-tools wget xdelta3 xsltproc yasm zip zlib1g-dev
+RUN apt-get install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
 #RUN curl -o jdk8.tgz https://android.googlesource.com/platform/prebuilts/jdk/jdk8/+archive/master.tar.gz \
  #&& tar -zxf jdk8.tgz linux-x86 \
  #&& mv linux-x86 /usr/lib/jvm/java-8-openjdk-amd64 \
