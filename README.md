@@ -6,6 +6,7 @@ First, build the image:
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
 $ cp ~/.gitconfig gitconfig
+$ cp ~/.zsh_history zsh_history
 $ podman build --build-arg userid=$(id -u) --build-arg groupid=$(id -g) --build-arg username=$(id -un) -t android-build-16 .
 ```
 
